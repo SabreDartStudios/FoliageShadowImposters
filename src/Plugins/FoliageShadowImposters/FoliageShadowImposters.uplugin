@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Foliage Shadow Imposters",
+	"Description": "A UE5 plugin to add Foliage Shadow Imposters to Nanite Foliage for increased performance.",
+	"Category": "Other",
+	"CreatedBy": "Dartanlla",
+	"CreatedByURL": "https://github.com/SabreDartStudios/FoliageShadowImposters",
+	"DocsURL": "https://github.com/SabreDartStudios/FoliageShadowImposters",
+	"MarketplaceURL": "",
+	"SupportURL": "https://discord.gg/qZ76Cmxcgp",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FoliageShadowImposters",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
