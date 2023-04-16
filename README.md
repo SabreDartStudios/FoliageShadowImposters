@@ -1,7 +1,7 @@
 # Foliage Shadow Imposters
-A UE5 plugin to add Foliage Shadow Imposters to Nanite Foliage for increased performance when using World Position Offset (WPO) and Virtual Shadow Maps.  We gain performance by disabling the expensive WPO shadow on the Nanite Foliage and replacing it with a cheap non-WPO shadow casting Foliage Shadow Imposter.  The compromise here is that the foliage will animate in the wind, but the shadows cast on the ground will not change.  This compromise leads to **massive** performance gains.
-
 *This plugin does NOT currently support packaged games because it is an editor plugin.  For it to support packaged games it needs some of the classes split out into a Runtime plugin.*
+
+A UE5 plugin to add Foliage Shadow Imposters to Nanite Foliage for increased performance when using World Position Offset (WPO) and Virtual Shadow Maps.  We gain performance by disabling the expensive WPO shadow on the Nanite Foliage and replacing it with a cheap non-WPO shadow casting Foliage Shadow Imposter.  The compromise here is that the foliage will animate in the wind, but the shadows cast on the ground will not change.  This compromise leads to **massive** performance gains.
 
 This plugin searches all InstancedFoliageActors for an OriginalFoliageMesh and adds a FoliageShadowImposterMesh with the same location, rotation, and scale.  The OriginalFoliageMesh should have Nanite Foliage turned on and be set to not cast a shadow in the FoliageType in the Foliage editor.  The OriginalFoliageMesh should have World Position Offset enabled.  The FoliageShadowImposterMesh should be a low poly LOD for the purpose of casting a cheaper shadow.  **The FoliageShadowImposterMesh must have FoliageShadowImposterMesh disabled.**  The plugin will automatically enable the shadow for FoliageShadowImposterMesh, set HiddenInGame, and set cast shadow when hidden.
 
