@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class FoliageShadowImposters : ModuleRules
+public class FoliageShadowImpostersRuntime : ModuleRules
 {
-	public FoliageShadowImposters(ReadOnlyTargetRules Target) : base(Target)
+	public FoliageShadowImpostersRuntime(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -34,17 +34,9 @@ public class FoliageShadowImposters : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Projects",
-				"InputCore",
-				"EditorFramework",
-				"UnrealEd",
-				"ToolMenus",
 				"CoreUObject",
 				"Engine",
-				"Slate",
-				"SlateCore",
-				"Foliage",
-                "FoliageShadowImpostersRuntime"
+				"Foliage"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
