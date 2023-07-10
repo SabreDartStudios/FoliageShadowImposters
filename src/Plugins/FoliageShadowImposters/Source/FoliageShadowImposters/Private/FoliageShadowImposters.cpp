@@ -106,6 +106,7 @@ void FFoliageShadowImpostersModule::AddFoliageShadowImpostersForThisMesh(FString
 							NewImposterMeshComponent->AttachToComponent(CurrentFoliageActor->GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 							UStaticMesh* ImposterMeshToUse = Cast<UStaticMesh>(StaticLoadObject(UStaticMesh::StaticClass(), NULL, *FoliageShadowImposterMeshPath));
 							NewImposterMeshComponent->SetStaticMesh(ImposterMeshToUse);
+							NewImposterMeshComponent->SetMobility(EComponentMobility::Static);
 							CurrentFoliageActor->Modify();
 
 							FTransform InstanceTransform;
